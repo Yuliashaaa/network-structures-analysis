@@ -1,1 +1,1 @@
-# network-structures-analysis
+# Analysis of network structures
