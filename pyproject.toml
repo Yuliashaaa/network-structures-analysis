@@ -5,8 +5,14 @@ description = "Analysis of network structures"
 authors = [
     {name = "Yuliia Shevchenko", email = "ulka.shevchenko@gmail.com"},
 ]
-dependencies = []
-requires-python = "==3.13.*"
+dependencies = [
+    "jupyter>=1.1.1",
+    "numpy>=2.2.1",
+    "matplotlib>=3.10.0",
+    "networkx>=3.4.2",
+    "powerlaw>=1.5"
+]
+requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
 
@@ -16,14 +22,14 @@ distribution = false
 [tool.pdm.options]
 sync = ["--no-self"]
 install = ["--no-self"]
-lock = ["--update-reuse", "-G:all", "--implementation=cpython", "--python=3.13"]
+lock = ["--update-reuse", "-G:all", "--implementation=cpython", "--python=3.12"]
 update = ["--no-self"]
 remove = ["--no-self"]
 
 
 [tool.black]
 line-length = 120
-target-version = ["py313"]
+target-version = ["py312"]
 skip-string-normalization = true
 
 [tool.isort]
@@ -34,7 +40,7 @@ profile = "black"
 fix = true
 line-length = 120
 show-fixes = true
-target-version = "py313"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["ALL"]
